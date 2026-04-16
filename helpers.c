@@ -38,6 +38,21 @@ int print_string(char *str)
  */
 int print_int(int n)
 {
-	(void)n;
-	return (0);
+    int count = 0;
+
+    if (n == -2147483648)
+        return (_putchar('-') + _putchar('2') + print_int(147483648));
+
+    if (n < 0)
+    {
+        count += _putchar('-');
+        n = -n;
+    }
+
+    if (n / 10)
+        count += print_int(n / 10);
+
+    count += _putchar((n % 10) + '0');
+
+    return (count);
 }
