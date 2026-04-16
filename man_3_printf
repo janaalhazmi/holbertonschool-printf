@@ -1,0 +1,39 @@
+.TH _printf 3 "April 2026" "Holberton School" "_printf manual"
+
+.SH NAME
+_printf - custom printf function
+
+.SH SYNOPSIS
+#include "main.h"
+
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+_printf is a custom implementation of the standard printf function.
+It produces output according to a format string.
+
+The format string may contain plain text and format specifiers.
+
+Supported specifiers:
+.TP
+%c
+Prints a character.
+.TP
+%s
+Prints a string.
+.TP
+%d
+Prints an integer.
+.TP
+%i
+Prints an integer.
+.TP
+%%
+Prints a percent sign.
+
+.SH RETURN VALUE
+Returns the number of characters printed (excluding the null byte).
+Returns -1 if an error occurs.
+
+.SH AUTHORS
+Jana Alhazmi, Laila Khaled
